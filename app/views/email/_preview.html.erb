@@ -1,0 +1,6 @@
+<li class="card bg-dark border-secondary" style="margin-bottom: 10px;" id="<%= email.id %>">
+	<div class="card-body">
+		<%= link_to email.object, email_path(email.id), class: "fs-5 ", style: "text-decoration: none; color: white;", remote: true %>
+		<p class="card-text fs-7"><%= email.content %></p>
+	</div>
+</li>

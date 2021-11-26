@@ -1,0 +1,14 @@
+<div class="container-fluid dark bg-dark text-light">
+	<div class="row">
+		<div class="col-3 border border-secondary" style="min-height: 92vh;">
+			<%= link_to "Recevoir un email", email_index_path, method: :post, class: "btn btn-lg btn-primary", style: "margin: 10px;", remote: true %>
+			<ul id="email-list" style="list-style: none; display: inline">
+				<% @emails.each do |email| %>
+					<%= render "preview", email: email %>
+				<% end %>
+			</ul>
+		</div>
+		<div class="col border border-secondary" id="email">
+		</div>
+	</div>
+</div>
